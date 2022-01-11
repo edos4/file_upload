@@ -6,7 +6,7 @@ ruby '2.7.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -27,6 +27,14 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+
+#environment variables
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
+
+#file upload
+gem 'carrierwave', '1.3.1'
+gem 'cloudinary', '~>1.13.2'
+gem 'rmagick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
