@@ -6,14 +6,18 @@
 
 4. On the config folder, create a file called cloudinary.yml with contents:
 development:
-  cloud_name: ENV["cloud_name"]
-  api_key: ENV["api_key"]
-  api_secret: ENV["api_secret"]
+  cloud_name: <%= ENV["cloud_name"] %>
+  
+  api_key: <%= ENV["api_key"] %>
+  
+  api_secret: <%= ENV["api_secret"] %>
 
 production:
-  cloud_name: ENV["cloud_name"]
-  api_key: ENV["api_key"]
-  api_secret: ENV["api_secret"]
+  cloud_name: <%= ENV["cloud_name"] %>
+  
+  api_key: <%= ENV["api_key"] %>
+  
+  api_secret: <%= ENV["api_secret"] %>
 
 5. On Gemfile, add:
 #environment variables
@@ -44,8 +48,6 @@ rails g scaffold attachment name:string image:string
 12. Create an uploader: 
 a. Create a folder named uploader inside app
 b. Create a file named img_uploader.rb with contents:
-
-# encoding: utf-8
 
 class ImgUploader < CarrierWave::Uploader::Base
 
