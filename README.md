@@ -1,3 +1,5 @@
+0. Install apps: sudo apt-get install imagemagick libmagickcore-dev libmagickwand-dev
+
 1. Register at Cloudinary.com
 
 2. Verify email
